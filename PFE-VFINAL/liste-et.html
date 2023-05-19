@@ -61,7 +61,7 @@
                         <a href="Resultat.html" class="nav-item nav-link"> Résultats </a>
                         <a href="Calendrier.html" class="nav-item nav-link"> Calendrier </a>
 
-                        <a href="list-profs.html" class="nav-item nav-link active"> Professeurs </a>
+                        <a href="list-profs.html" class="nav-item nav-link "> Professeurs </a>
                         <a href="contact.html" class="nav-item nav-link"> Contact <i class="fa-solid fa-comment far"></i></a>
                     </div>
                 </div>
@@ -74,11 +74,35 @@
         <h4>Email: azzelarab.bouferdou@gmail.com</h4>
         <h4>Phone: 0680554238</h4>
       </div>
-      <div class="prf-list position-absolute">
-        <h1><span> Liste des professeurs</span></h1>
+      <div class="etud-list position-absolute">
+        <h1><span> Liste des étudiants</span></h1>
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass" style="color: #152440;"></i>
             <input type="text" name="Search" id="search-input">
+        </div>
+        <div class="select-et">
+            <table>
+                <tr>
+                    <td>
+                        <label for="Classe"> Classe:</label>
+                    </td>
+                    <td>
+                        <select name="Classe" id="Classe">
+                            <option value="1" selected>GI</option>
+                            <option value="2">MLT</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="Ann"> Année: </label>
+                    </td>
+                    <td>
+                        <select name="Ann" id="Ann">
+                            <option value="1" selected>2022-2023</option>
+                            <option value="2">2021-2022</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
         </div>
         <table id="list-table">
             <tr class="not-header">
@@ -92,7 +116,7 @@
                 Prénom
             </th>
             <th>
-                Age
+                Date de naissance
             </th>
             <th>
                 Email
@@ -101,10 +125,7 @@
                 Tél
             </th>
             <th>
-                Niveau
-            </th>
-            <th>
-                Experiences
+                Classe
             </th>
             <th>
                 Action
@@ -121,7 +142,7 @@
                 Azze-el arab
             </td>
             <td>
-                25
+                2002-07-20
             </td>
             <td>
                 contact@sora.com
@@ -130,11 +151,9 @@
                 +212680554238
             </td>
             <td>
-                S3 , S4
+                MLT
             </td>
-            <td>
 
-            </td>
             <td>
                 <i class="fa-solid fa-pen-to-square"></i>
                 <i class="fa-solid fa-trash-can"></i>
@@ -151,7 +170,7 @@
                     Azze-el arab
                 </td>
                 <td>
-                    25
+                    2002-07-20
                 </td>
                 <td>
                     contact@sora.com
@@ -160,11 +179,9 @@
                     +212680554238
                 </td>
                 <td>
-                    S3 , S4
+                    GI
                 </td>
-                <td>
 
-                </td>
                 <td>
                     <i class="fa-solid fa-pen-to-square"></i>
                     <i class="fa-solid fa-trash-can"></i>
@@ -176,8 +193,8 @@
 
         <!-- ---------------------------------------------- -->
 
-        <div class="prf-info">
-        <table class="table-infoPrf">
+        <div class="et-info">
+        <table class="table-infoEt">
             <tr>
               <td>
                 <img src="IMGS/User.jpg" alt="" class="prof-img rounded-circle" >
@@ -300,35 +317,24 @@
       </tr>
       <tr>
         <td>
-          <label for="Niv">Niveau:</label>
+          <label for="Niv">Classe:</label>
         </td>
         <td>
         <input name="NivT" id="NivT" type="text"></input>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
-          <div class="line"></div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="Exp">Experiences:</label>
-        </td>
-        <td>
-          <textarea name="Exp" id="Exp"  rows="2"></textarea>
-        </td>
-      </tr>
+
+
 
           </table>
           <input type="Submit" value="Modifier" class="sub-btn">
           <input type="reset" value="Delete" class="sub-btn">
-        <div class="back-circle" onclick="back()">
+        <div class="back-circle" onclick="back3()">
             <i class="fa-solid fa-left-long fa-2xl" style="color: #ffffff;"></i>
                 </div>
         </div>
       </div>
-      <a class="btn-ajt" href="Profs-ajt.html"><i class="fa-solid fa-user-plus" style="color: #fcfdfe;"></i> Ajouter professeur</a>
+      <a class="btn-ajt" href="ad_etudiant.html"><i class="fa-solid fa-user-plus" style="color: #fcfdfe;"></i> Add student</a>
                <!-- Footer Start -->
          <!-- <br><br> -->
          <div class="container-fluid footer-1 footer-text text-secondary p-5">

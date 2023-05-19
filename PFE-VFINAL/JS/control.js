@@ -50,7 +50,6 @@ function onRowClick(cells) {
   const listTable = document.querySelector("#list-table");
   const searchBox = document.querySelector(".search-box");
   const btnA = document.querySelector('.btn-ajt')
-  
   listTable.style.display = "none";
   prfInfo.style.display = "block";
   searchBox.style.display = "none";
@@ -66,13 +65,37 @@ function onRowClick(cells) {
       const age = parseInt(cells[i].textContent.trim().slice(0));
       const birthDate = calculateBirthdayFromAge(age);
       const [day, month, year] = birthDate.split("/").map((part) => part.padStart(2, "0"));
-      const formattedBirthDate = `${year}-${month}-${day}`;
+      const formattedBirthDate = `${year}-${day}-${month}`;
+
       input.value = formattedBirthDate;
       i++;
     } else {
       input.value = cells[i].textContent.trim();
       i++;
     }
+  });
+}
+function onRowClick2(cells) {
+  const prfInfo = document.querySelector(".et-info");
+  const listTable = document.querySelector("#list-table");
+  const searchBox = document.querySelector(".search-box");
+  const sel = document.querySelector(".select-et");
+  const btnA = document.querySelector('.btn-ajt')
+  listTable.style.display = "none";
+  prfInfo.style.display = "block";
+  searchBox.style.display = "none";
+  btnA.style.marginTop = '11.8%'
+  btnA.style.marginLeft = '75%';
+  sel.style.display = "none"
+  const prfInfoInputs = document.querySelectorAll(".table-infoEt input");
+  let i = 0;
+
+  // Loops through the inputs in the "table-infoPrf" section and populates them with the information of the selected person
+  prfInfoInputs.forEach((input) => {
+
+      input.value = cells[i].textContent.trim();
+      i++;
+    
   });
 }
 
@@ -94,6 +117,7 @@ function onrowC2(cells){
 // Adds a click listener to each row of the table with the ID "list-table"
 addRowClickListener("list-table", onRowClick);
 addRowClickListener("res-table", onrowC2);
+addRowClickListener("list-table", onRowClick2);
 
 
 function back() {
@@ -121,6 +145,19 @@ function back2() {
   et.style.display = 'none';
   headt.textContent = ` Liste des résultats`;
   backC.style.display = 'none';
+}
+function back3() {
+  const prfInfo = document.querySelector(".et-info");
+  const listTable = document.querySelector("#list-table");
+  const searchBox = document.querySelector(".search-box");
+  const sel = document.querySelector(".select-et");
+  const btnA = document.querySelector('.btn-ajt');
+  listTable.style.display = "";
+  prfInfo.style.display = "none";
+  searchBox.style.display = "";
+  btnA.style.marginTop = '15.8%';
+  btnA.style.marginLeft = '86.5%';
+  sel.style.display=""
 }
 
 
